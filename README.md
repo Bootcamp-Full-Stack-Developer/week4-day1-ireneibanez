@@ -3,8 +3,8 @@
 Maquetar el diseño disponible en [Zeplin](https://app.zeplin.io/project) aplicando los conocimientos Sass:
 
 - Anidamiento de selectores.
-- Referenciando al selectore padre.
-- Escribir comentarios no visibles en el fichero CSS.
+- Referencia al selector padre.
+- Comentarios no visibles en el fichero CSS.
 
 ## Variables Sass a utilizar
 
@@ -30,9 +30,9 @@ $font-size-xl:    36px
 
 Por otro lado, crear las variables para los 3 breakpoints indicados a continuación considerando que cada varibale ha de contener la expresión completa de la _media query_.
 
-- Tablet: 768px
-- Desktop: 1024px
-- Desktop HD: 1260px
+- Tablet: `768px`
+- Desktop: `1024px`
+- Desktop HD: `1260px`
 
 ## Custom properties
 
