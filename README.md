@@ -1,6 +1,6 @@
 # Aplicamos Sass/SCSS
 
-Maquetar el diseño disponible en [Zeplin](https://app.zeplin.io/project) aplicando los conocimientos Sass:
+Maquetar el diseño disponible en [Zeplin](https://app.zeplin.io/projects) aplicando los conocimientos Sass:
 
 - Anidamiento de selectores.
 - Referencia al selector padre.
