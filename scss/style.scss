@@ -1,0 +1,110 @@
+@import "reset.scss";
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,400,500');
+
+$colors: (
+    '$black': '#000',
+    '$white': '#fff',
+    '$green': '#5db250',
+    '$green-light': '#9de7ac',
+    '$gray-dark': '#323232',
+    '$purple': '#8c40a3',
+);
+
+$font-size: (
+    '$base': '16px',
+    '$sm': '14px',
+    '$md': '18px',
+    '$lg': '20px',
+    '$xl': '26px',
+    '$xxl': '30px',
+);
+
+$font-weight: (
+    '$thin': '100',
+    '$extra-light': '200',
+    '$light': '300',
+    '$regular': '400',
+    '$medium': '500',
+);
+
+body {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+.svg-icons {
+    width: 50px;
+    height: 50px;
+}
+
+.bootcamp {
+    background: url("../img/bg-image.jpg") 35% 0 no-repeat;
+    .container {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    &__header {
+        padding: 36px 28px 44px 28px;
+        a { 
+            font-weight: unquote(map-get($font-weight, '$light'));
+            text-decoration: none;
+            .bootcamp__heading {
+                margin-bottom: 14px;
+                font-size: unquote(map-get($font-size, '$xxl'));
+                color: unquote(map-get($colors, '$white')); 
+            }
+            .bootcamp__sub-heading {
+                margin-bottom: 52px;
+                font-size: unquote(map-get($font-size, '$md'));
+                color: unquote(map-get($colors, '$green-light'));
+            }   
+        }
+    }
+
+    &__metainfo {
+        margin-bottom: 44px;
+    }
+
+    &__metainfo li{
+        font-weight: unquote(map-get($font-weight, '$medium'));
+        font-size: unquote(map-get($font-size, '$sm'));
+        color: unquote(map-get($colors, '$white'));
+    }
+
+    &__lead {
+        font-weight: unquote(map-get($font-weight, '$thin'));
+        font-size: unquote(map-get($font-size, '$lg'));
+        color: unquote(map-get($colors, '$white'));
+    }
+
+    &__heading-explanation {
+        margin-left: 28px;
+        margin-right: 28px;
+        font-weight: unquote(map-get($font-weight, '$light'));
+        font-size: unquote(map-get($font-size, '$xl'));
+        color: unquote(map-get($colors, '$green'));
+    }
+
+    &-explanation {
+        margin: 17px 28px 34px 28px;
+        line-height: 1.81rem;
+        font-weight: unquote(map-get($font-weight, '$extra-light'));
+        font-size: unquote(map-get($font-size, '$base'));
+        color: unquote(map-get($colors, '$black'));
+    }
+
+    .btn {
+        padding: 8px 40px;
+        margin: 34px 29px 40px 39px;
+        line-height: 1.44rem;
+        font-weight: unquote(map-get($font-weight, '$regular'));
+        font-size: unquote(map-get($font-size, '$md'));
+        background-color: unquote(map-get($colors, '$white'));
+        color: unquote(map-get($colors, '$purple'));
+        border: 1px solid unquote(map-get($colors, '$purple'));
+        border-radius: 23.5px;
+    }
+    
+
+}
+
+
