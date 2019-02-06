@@ -31,22 +31,22 @@ body {
     font-family: 'Encode Sans', sans-serif;
 }
 
-.svg-icons {
-    width: 50px;
-    height: 50px;
-}
-
 .bootcamp {
     background: url("../img/bg-image.jpg") 35% 0 no-repeat;
     .container {
         max-width: 320px;
         margin: 0 auto;
     }
+
     &__header {
         padding: 36px 28px 44px 28px;
         a { 
             font-weight: unquote(map-get($font-weight, '$light'));
             text-decoration: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
             .bootcamp__heading {
                 margin-bottom: 14px;
                 font-size: unquote(map-get($font-size, '$xxl'));
@@ -61,38 +61,67 @@ body {
     }
 
     &__metainfo {
-        margin-bottom: 44px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__metainfo li{
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
         font-weight: unquote(map-get($font-weight, '$medium'));
         font-size: unquote(map-get($font-size, '$sm'));
-        color: unquote(map-get($colors, '$white'));
+        color: unquote(map-get($colors, '$white')); 
+        & abbr {
+            text-decoration: none;
+        }
     }
 
+    .sprite {
+        fill: #fff;
+        margin-right: 6px;
+    }    
+
     &__lead {
+        padding: 44px 0;
         font-weight: unquote(map-get($font-weight, '$thin'));
         font-size: unquote(map-get($font-size, '$lg'));
         color: unquote(map-get($colors, '$white'));
     }
 
-    &__heading-explanation {
+    &__content::before {
+        content: "";
+        height: 30px;
+        background-color: rgba(0, 0, 0, .49);
+    }
+
+   
+    &__content {
+        transform: skewY(10deg);
+        padding: 44px 0;
+        background-color: #fff;
+    }
+
+    &__content__heading {
         margin-left: 28px;
         margin-right: 28px;
         font-weight: unquote(map-get($font-weight, '$light'));
         font-size: unquote(map-get($font-size, '$xl'));
         color: unquote(map-get($colors, '$green'));
+        transform: skewY(-10deg)
     }
 
-    &-explanation {
+    &__content__explanation {
         margin: 17px 28px 34px 28px;
         line-height: 1.81rem;
         font-weight: unquote(map-get($font-weight, '$extra-light'));
         font-size: unquote(map-get($font-size, '$base'));
         color: unquote(map-get($colors, '$black'));
+        transform: skewY(-10deg);
     }
 
-    .btn {
+    @mixin  button {
         padding: 8px 40px;
         margin: 34px 29px 40px 39px;
         line-height: 1.44rem;
@@ -102,8 +131,23 @@ body {
         color: unquote(map-get($colors, '$purple'));
         border: 1px solid unquote(map-get($colors, '$purple'));
         border-radius: 23.5px;
-    }
-    
+        &:hover {
+          background-color: unquote(map-get($colors, '$purple'));
+          color: unquote(map-get($colors, '$white'));
+        }
+      }
+      
+      @mixin transition($transition...) {
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+      }
+      
+      .btn {
+        @include button;
+        @include transition(background 250ms, color 250ms);
+        transform: skewY(-10deg)
+      }
 
 }
 
